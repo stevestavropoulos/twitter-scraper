@@ -60,6 +60,11 @@ func New() *Scraper {
 	}
 }
 
+// GetClient returns the underlying http.Client
+func (s *Scraper) GetClient() *http.Client {
+	return s.client
+}
+
 func (s *Scraper) setBearerToken(token string) {
 	s.bearerToken = token
 	s.guestToken = ""
