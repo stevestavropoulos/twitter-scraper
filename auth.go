@@ -67,6 +67,11 @@ func (s *Scraper) IsLoggedIn() bool {
 	return s.isLogged
 }
 
+// Force scraper to think it has logged in
+func (s *Scraper) SetLoggedIn() bool {
+	s.isLogged = true
+}
+
 // Login to Twitter
 func (s *Scraper) Login(username string, password string) error {
 	s.setBearerToken(bearerToken2)
