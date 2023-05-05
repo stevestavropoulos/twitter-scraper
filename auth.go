@@ -68,7 +68,7 @@ func (s *Scraper) IsLoggedIn() bool {
 }
 
 // Force scraper to think it has logged in
-func (s *Scraper) SetLoggedIn() bool {
+func (s *Scraper) SetLoggedIn() {
 	s.isLogged = true
 }
 
